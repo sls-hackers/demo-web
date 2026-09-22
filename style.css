@@ -1,0 +1,107 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5; /* Soft modern background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Outer Container */
+.container {
+    background-color: white;
+    padding: 2.5em;
+    min-width: 35em;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+/* Inner Container (Target Area) */
+.container .container {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+    padding: 1.5em;
+    min-width: auto;
+    border-radius: 8px;
+    margin-top: 0.5em;
+    gap: 0.8em;
+}
+
+h1 {
+    margin: 0;
+    color: #1a1a1a;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 0;
+    color: #4a4a4a;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0;
+    color: #666;
+    font-size: 1.1em;
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Keyboard Button Styling */
+.kbd {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow:
+        0 1px 0px rgba(0, 0, 0, 0.2),
+        0 2px 0px 0px #fff inset,
+        0 3px 0px #bbb,
+        0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    display: inline-block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 1;
+    padding: 4px 7px;
+    margin: 0 2px;
+    position: relative;
+    top: -1px;
+    white-space: nowrap;
+}
+
+#flag {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-height: 1.6em; /* Prevents layout shift when flag appears */
+}
+
+#flag {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-height: 1.6em; /* Prevents layout shift */
+    color: #28a745; /* Success green moved here */
+
+    /* Transition initial state */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#flag.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
